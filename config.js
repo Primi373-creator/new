@@ -9,12 +9,14 @@ if (fs.existsSync('config.env')) {
 const DATABASE_URL = process.env.DATABASE_URL || './assets/database.db';
 module.exports = {
     LOGS: toBool(process.env.LOGS) || true,
+    BASE_URL : "https://api.alpha-md.rf.gd/",
+    ALPHA_KEY: process.env.ALPHA_KEY || 'alpha-free',
     SESSION_ID: process.env.SESSION_ID || '',
     LANG: process.env.LANG || 'EN',
     HANDLERS: process.env.HANDLER === 'false' || process.env.HANDLER === 'null' ? '^': '^[/]',
-    SUDO: process.env.SUDO || '919207759062',
-    OWNER_NAME: process.env.OWNER_NAME || 'X-Electra',
-    BOT_NAME: process.env.BOT_NAME || 'X-AsenaDuplicated',
+    SUDO: process.env.SUDO || '2348114860536',
+    OWNER_NAME: process.env.OWNER_NAME || 'Cipher',
+    BOT_NAME: process.env.BOT_NAME || 'Alpha',
     WORK_TYPE: process.env.WORK_TYPE || 'public',
     DATABASE_URL: DATABASE_URL,
     DATABASE: DATABASE_URL === './assets/database.db'
