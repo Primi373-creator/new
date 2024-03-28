@@ -1,17 +1,10 @@
 const plugins = require("../lib/plugins");
-const {
-    command,
-    isPrivate,
-    clockString
-} = require("../lib");
-const {
-    OWNER_NAME,
-    BOT_NAME
-} = require("../config");
+const { cmd, isPrivate, clockString } = require("../lib");
+const { OWNER_NAME, BOT_NAME } = require("../config");
 const {
     tiny
 } = require("@viper-x/fancytext")
-command(
+cmd(
     {
         pattern: "menu",
         fromMe: isPrivate,

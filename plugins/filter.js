@@ -4,12 +4,12 @@ const {
     deleteFilter,
 } = require("../assets/database/filters");
 const {
-    command,
+    cmd,
     isPrivate,
     tiny
 } = require("../lib");
 
-command(
+cmd(
     {
         pattern: "filter",
         fromMe: true,
@@ -46,7 +46,7 @@ command(
     }
 );
 
-command(
+cmd(
     {
         pattern: "stop",
         fromMe: true,
@@ -67,7 +67,7 @@ command(
     }
 );
 
-command({
+cmd({
     on: "text",
     fromMe: isPrivate
 }, async (message, match) => {

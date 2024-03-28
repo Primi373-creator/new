@@ -1,35 +1,19 @@
-const {
-    default: makeWASocket,
-        useMultiFileAuthState,
-        Browsers,
-    } = require("@whiskeysockets/baileys");
-    const path = require("path");
-    const {
-        Image,
-        Message,
-        Sticker,
-        Video
-    } = require("./lib/Messages");
-    let fs = require("fs");
-    let config = require("./config");
-    const pino = require("pino");
-    logger = pino({
-        level: "silent"
-    });
-    const {
-        serialize,
-        Greetings
-    } = require("./lib");
-    const plugins = require("./lib/plugins");
-    const {
-        MakeSession
-    } = require("./lib/session");
-    if (!fs.existsSync("./session/creds.json")) {
-        MakeSession(config.SESSION_ID, "./session/creds.json").then(
-            console.log("Vesrion : " + require("./package.json").version)
+const { default: makeWASocket, useMultiFileAuthState, Browsers } = require("@whiskeysockets/baileys");
+const path = require("path");
+const { Image, Message, Sticker, Video } = require("./lib/Messages");
+let fs = require("fs");
+let config = require("./config");
+const pino = require("pino");
+logger = pino({level: "silent"});
+const { serialize, Greetings } = require("./lib");
+const plugins = require("./lib/plugins");
+const { MakeSession } = require("./lib/session");
+ if (!fs.existsSync("./session/creds.json")) {
+    MakeSession(config.SESSION_ID, "./session/creds.json").then(
+    console.log("Vesrion : " + require("./package.json").version)
         );
     }
-    fs.readdirSync(__dirname + "/assets/database/").forEach((db) => {
+ fs.readdirSync(__dirname + "/assets/database/").forEach((db) => {
         if (path.extname(db).toLowerCase() == ".js") {
             require(__dirname + "/assets/database/" + db);
         }
@@ -57,7 +41,7 @@ const {
                     lastDisconnect
                 } = s;
                 if (connection === "connecting") {
-                    console.log("X-AsenaDuplicated");
+                    console.log("Alpha");
                     console.log("ℹ️ Connecting to WhatsApp... Please Wait.");
                 }
                 if (connection === "open") {
@@ -74,7 +58,7 @@ const {
                     });
                     console.log("✅ Plugins Installed!");
 
-                    let str = `\`\`\`X-Asena connected \nversion : ${
+                    let str = `\`\`\`Alpha connected \nversion : ${
                     require(__dirname + "/package.json").version
                     }\nTotal Plugins : ${plugins.commands.length}\nWorktype: ${
                     config.WORK_TYPE

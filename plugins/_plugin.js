@@ -1,4 +1,4 @@
-const {
+/*const {
     command
 } = require("../lib");
 const got = require("got");
@@ -111,4 +111,4 @@ command(
             await message.sendMessage(`Plugin ${match} deleted`);
         }
     }
-);
+);*/

@@ -1,10 +1,6 @@
-const {
-    command
-} = require("../lib/");
-const {
-    tiny
-} = require("@viper-x/fancytext")
-command(
+const { cmd } = require("../lib/");
+const { tiny } = require("@viper-x/fancytext")
+cmd(
     {
         pattern: "ping",
         fromMe: false,

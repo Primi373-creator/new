@@ -1,5 +1,5 @@
 const {
-    command
+    cmd
 } = require("../lib/");
 const {
     setMessage,
@@ -10,7 +10,7 @@ const {
 } =
 require("../assets/database").Greetings;
 
-command(
+cmd(
     {
         pattern: "welcome",
         fromMe: true,
@@ -63,7 +63,7 @@ command(
     }
 );
 
-command(
+cmd(
     {
         pattern: "goodbye",
         fromMe: true,
